@@ -3,7 +3,7 @@ require 'open-uri'
 require 'nokogiri'
 require 'byebug'
 
-def scraper
+def dark_trader
     parsed_page = Nokogiri::HTML(URI.open('https://coinmarketcap.com/all/views/all/'))
     names = []
     prices = []
@@ -15,4 +15,4 @@ def scraper
     print data = names.zip(prices).to_h
 end
 
-scraper
+dark_trader
