@@ -12,7 +12,7 @@ def scraper
         names.push(crypto_name.css('a.cmc-link')[0]&.text)
         prices.push(crypto_name.css('a.cmc-link')[2]&.text)
     end
-    print my_hash = names.zip(prices).to_h
+    print data = names.zip(prices).to_h
 end
 
 scraper
